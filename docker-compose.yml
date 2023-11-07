@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:lts-alpine
+    ports:
+      - 4200:4200
+    # --host 0.0.0.0 to listen to all the interfaces from the container (dev env)
+    command: >
+      sh -c "npx ng new rank"
