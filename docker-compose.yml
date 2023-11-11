@@ -7,4 +7,12 @@ services:
       - 4200:4200
     # --host 0.0.0.0 to listen to all the interfaces from the container (dev env)
     command: >
-      sh -c "npx ng new rank"
+      sh -c "npm install &&
+             npx ng serve --host 0.0.0.0"
+
+FROM node:lts-alpine AS build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+RUN npm run build

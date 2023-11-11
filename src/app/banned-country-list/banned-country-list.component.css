@@ -1,0 +1,41 @@
+.example-tab-icon {
+    margin-right: 8px;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: calc(100% - 10px);
+    margin: 0 10px;
+  }
+
+  .outer-card {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .banned-header-image {
+    background-image: url('./../helpers/no-sign.svg');
+    background-size: cover;
+  }
+
+  .year-select{
+    width: 25%;
+    margin: 0px 10px;
+}
+
+.month-select{
+  width: 25%;
+    margin: 0px 20px;
+}
+
+.banned-content {
+  max-width: 400px;
+  margin: auto;
+  height: 50vh;
+  overflow: scroll;
+}

@@ -1,0 +1,51 @@
+.example-tab-icon {
+    margin-right: 8px;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: calc(100% - 10px);
+    margin: 0 10px;
+  }
+
+  .outer-card {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .example-header-image {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/010/145/919/non_2x/credit-card-icon-sign-symbol-design-free-png.png');
+    background-size: cover;
+  }
+
+  .year-select{
+    width: 25%;
+    margin: 0px 10px;
+}
+
+.month-select{
+  width: 25%;
+    margin: 0px 20px;
+}
+#banned-header-error{
+  color: red;
+}
+.banned-header{
+color: red;
+}
+
+.banned-header-image {
+  background-image: url('./../helpers/no-sign.svg');
+  background-size: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  position: absolute;
+  top: 10px;
+  width: 300px;
+}

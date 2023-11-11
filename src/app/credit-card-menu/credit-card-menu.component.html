@@ -1,0 +1,50 @@
+
+<mat-card class="outer-card">  
+    <img mat-card-image src="https://static.vecteezy.com/system/resources/previews/010/145/919/non_2x/credit-card-icon-sign-symbol-design-free-png.png" alt="Store A Card">
+    <span *ngIf="isBanned" class="banned-header-image" ></span>
+    <div *ngIf="isBanned" class="banned-header">The Country selected is on the Banned List</div>
+    <div *ngIf="notValidation || validationErrorMessage" id="banned-header-error">{{validationErrorMessage}}</div>
+    <mat-card-content>
+      <form class="example-form" (ngSubmit)="onSubmit()" [formGroup]="profileForm" >
+        <mat-form-field class="example-full-width">
+          <mat-label>Credit Card</mat-label>
+          <input matInput placeholder="Ex. ############" type="text" formControlName="ccNum" value="profileForm.get('ccNum').value | CreditCard" >
+        </mat-form-field>
+        <mat-form-field class="month-select">
+          <mat-label>exp. Month</mat-label>
+          <mat-select formControlName="month" required>
+            <mat-option>--</mat-option>
+            <mat-option  *ngFor="let month of months" [value]="month">
+              {{month}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="year-select">
+          <mat-label>exp. Year</mat-label>
+          <mat-select formControlName="year"  required>
+            <mat-option>--</mat-option>
+            <mat-option   *ngFor="let year of years" [value]="year">
+              {{year}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="month-select">
+          <mat-label>CVV</mat-label>
+          <input matInput placeholder="Ex. 928" type="number" max="999"  formControlName="cvv">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Select Country</mat-label>
+          <mat-select formControlName="country" (selectionChange)="countrySelection($event.value)" required>
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let country of countryList" [value]="country">
+              {{country?.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button  (click)="onSubmit()">Submit</button>
+    </mat-card-actions>
+  </mat-card>

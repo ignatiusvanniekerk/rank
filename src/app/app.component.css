@@ -1,0 +1,27 @@
+.tab-class{
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tab-heading{
+  margin: 0px 46%;
+  position: absolute;
+  font-family: fantasy;
+  letter-spacing: 20px;
+  text-shadow: 3px 3px #00000063;
+  size: 30px;
+  font-size: 38px;
+  top: 21px;
+}
+
+.tab-height{
+  height: 75vh;
+  padding-top: 20px;
+  background-color: #090c0cbf;
+}
+
+.mat-tab-header {
+  background-color: aqua !important;
+
+}

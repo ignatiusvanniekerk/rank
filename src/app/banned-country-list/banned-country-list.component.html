@@ -1,0 +1,25 @@
+
+
+
+<mat-card class="outer-card" [formGroup]="profileForm">
+    <mat-card-header>
+      <div mat-card-avatar class="banned-header-image"></div>
+      <mat-card-title>Banned Country List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="search-field">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search" type="text" (input)="onSearchChange($event)" formControlName="searchControlObj"> 
+      </mat-form-field>
+      <mat-slide-toggle (toggleChange)="toggleChange($event)" [disabled]="!!value" [checked]="!displayAll">Display Banned</mat-slide-toggle>
+    </mat-card-content>
+    <mat-card-content class="banned-content">
+        <mat-selection-list #countrySelectedList [compareWith]="compare" formControlName="formControlObj" [multiple]="true" (selectionChange)="selectionChange()">
+            <mat-list-option *ngFor="let country of countryList" [value]="country">
+              {{country?.name}}
+            </mat-list-option>
+            <mat-divider></mat-divider>
+          </mat-selection-list>
+    </mat-card-content>
+   
+  </mat-card>

@@ -1,0 +1,24 @@
+
+
+
+<mat-card class="outer-card">
+    <mat-card-header>
+      <div mat-card-avatar class="banned-header-image"></div>
+      <mat-card-title>Banned Country List</mat-card-title>
+      
+    </mat-card-header>
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-content class="banned-content">
+        <mat-selection-list #countrySelectedList [multiple]="false">
+            <mat-list-option class="card-look" *ngFor="let creditCard of creditCardList">
+              <div mat-line>Card Num : {{creditCard?.ccNum}}</div>
+              <div mat-line>Month : {{creditCard?.month}}</div>
+              <div mat-line>Year : {{creditCard?.year}}</div>
+              <div mat-line>CVV : {{creditCard?.cvv}}</div>
+              <div mat-line>Country : {{creditCard?.country?.name}}</div>
+            </mat-list-option>
+          </mat-selection-list>
+    </mat-card-content>
+  </mat-card>
