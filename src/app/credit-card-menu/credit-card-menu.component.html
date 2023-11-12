@@ -5,8 +5,8 @@
     <div *ngIf="isBanned" class="banned-header">The Country selected is on the Banned List</div>
     <div *ngIf="notValidation || validationErrorMessage" id="banned-header-error">{{validationErrorMessage}}</div>
     <mat-card-content>
-      <form class="example-form" (ngSubmit)="onSubmit()" [formGroup]="profileForm" >
-        <mat-form-field class="example-full-width">
+      <form class="submit-form" (ngSubmit)="onSubmit()" [formGroup]="profileForm" >
+        <mat-form-field class="cc-full-width">
           <mat-label>Credit Card</mat-label>
           <input matInput placeholder="Ex. ############" type="text" formControlName="ccNum" value="profileForm.get('ccNum').value | CreditCard" >
         </mat-form-field>
@@ -32,7 +32,7 @@
           <mat-label>CVV</mat-label>
           <input matInput placeholder="Ex. 928" type="number" max="999"  formControlName="cvv">
         </mat-form-field>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="cc-full-width">
           <mat-label>Select Country</mat-label>
           <mat-select formControlName="country" (selectionChange)="countrySelection($event.value)" required>
             <mat-option>--</mat-option>

@@ -1,14 +1,11 @@
-.example-tab-icon {
-    margin-right: 8px;
-  }
 
-  .example-form {
+  .submit-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
   }
   
-  .example-full-width {
+  .cc-full-width {
     width: calc(100% - 10px);
     margin: 0 10px;
   }
@@ -18,11 +15,6 @@
     margin: auto;
   }
   
-  .example-header-image {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/010/145/919/non_2x/credit-card-icon-sign-symbol-design-free-png.png');
-    background-size: cover;
-  }
-
   .year-select{
     width: 25%;
     margin: 0px 10px;

@@ -15,6 +15,7 @@ export const years = Array.from({length: 10}, (x, i) => i+23);
   providers: [CreditCardMaskPipe]
 })
 export class CreditCardMenuComponent {
+  
   notValidation: boolean = false
   isBanned: boolean = false  
   countryList  = COUNTRY_LIST
@@ -44,7 +45,6 @@ export class CreditCardMenuComponent {
     this.notValidation = !this.profileForm.valid
     let rawData = this.profileForm.getRawValue()
     let cardEx = this.creditCardCheck(rawData.ccNum)
-    console.log(cardEx)
     if(!this.profileForm.valid){
       setTimeout(()=>{
         this.notValidation = !this.notValidation

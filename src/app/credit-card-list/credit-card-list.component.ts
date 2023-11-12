@@ -10,7 +10,7 @@ import { HelperService } from '../helpers/helper.service';
   templateUrl: './credit-card-list.component.html',
   styleUrls: ['./credit-card-list.component.css'],
 })
-export class CreditCardListComponent implements OnInit {
+export class CreditCardListComponent {
   creditCardList: any[]  = []
   value: string = ''
   displayAll: boolean = true
@@ -22,10 +22,4 @@ export class CreditCardListComponent implements OnInit {
       this.creditCardList = value
      })
    }
-
-   
-    ngOnInit(): void {
-      
-    }
-
 }
